@@ -1,0 +1,54 @@
+\documentclass{article}
+% To generate template specific to Supernote Nomad dimensions
+% Feel free to adjust the document as per your taste.
+
+% Nomad dimensions
+%   Device: 
+%       L: 191.85mm, W: 139.2mm
+%   Screen: 
+%       L: 158mm, W: 119mm
+% Toolbar is roughly about 8mm
+
+% Arguments
+%   top,bottom,right,left: Define margin
+%   showframe: Helps with visualing the margin and can be removed
+\usepackage[
+  paperheight=158mm,
+  paperwidth=119mm,
+  top=0mm,
+  bottom=0mm,
+  right=0mm,
+  left=0mm,
+  heightrounded,
+  showframe
+]{geometry}
+
+% Arguments:
+%   patternsize: Controls the distance between dots
+\usepackage[
+  pattern=dot, 
+  patternsize=6mm, 
+  dotsize=0.2mm,
+  textarea
+]{gridpapers}
+
+\begin{document}
+
+	~ %otherwise there will be an error
+
+\end{document}
+
+References:
+- Supernote Nomad Dimensions:
+    - Device: https://cdn.shopify.com/s/files/1/0565/1945/9007/files/actual_size_nomad_01afc267-511b-43cd-89d5-239c835a89f9.pdf?v=1707748176
+    - Screen: https://www.reddit.com/r/Supernote/comments/18t8btn/screen_not_device_dimensions_for_a6x2_nomad/
+- Package: 
+    - Geomentry: https://texdoc.org/serve/geometry.pdf/0
+    - Gridpaper: https://ctan.math.illinois.edu/macros/latex/contrib/gridpapers/gridpapers.pdf
+- PDF to PNG:
+    - Use any online PDF-to-PNG converter
+    - I used ImageMagick: https://imagemagick.org/script/command-line-options.php
+     magick -density 300 -units PixelsPerInch <PDF-FILE> -resize 1404x1872 -quality 90 <TEMPLATE-NAME>
+- Page dimensions: https://tex.stackexchange.com/questions/80505/how-to-make-document-custom-page-dimensions
+- Dot sheet for personal notes: https://www.overleaf.com/latex/templates/isometric-dot-sheet-for-personal-notes-with-a-header-and-footer/xkpgwypxkbvv
+- Other possible paper patterns with tex program provided: https://michaelgoerz.net/notes//printable-paper-with-latex-and-tikz/
